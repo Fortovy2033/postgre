@@ -21,4 +21,8 @@ func main() {
 	if err := sql.InsertRow(ctx, conn, "homework", "p123, ex4"); err != nil {
 		panic(err)
 	}
+
+	if err := sql.UpdateRow(ctx, conn, 2); err != nil {
+		panic(err)
+	}
 }

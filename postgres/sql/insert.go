@@ -14,7 +14,7 @@ func InsertRow(ctx context.Context, conn *pgx.Conn, title, description string) e
 	`
 
 	_, err := conn.Exec(ctx, sqlQuery,
-		title, description, false, time.Now(),)
-		
+		title, description, false, time.Now())
+
 	return err
 }
