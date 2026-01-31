@@ -25,4 +25,8 @@ func main() {
 	if err := sql.UpdateRow(ctx, conn, 2); err != nil {
 		panic(err)
 	}
+	if err := sql.DeleteRow(ctx, conn, 1); err != nil {
+		panic(err)
+	}
+
 }
