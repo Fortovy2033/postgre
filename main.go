@@ -14,19 +14,23 @@ func main() {
 		panic(err)
 	}
 
-	if err := sql.CreateTable(ctx, conn); err != nil {
-		panic(err)
-	}
+	// if err := sql.CreateTable(ctx, conn); err != nil {
+	// 	panic(err)
+	// }
 
-	if err := sql.InsertRow(ctx, conn, "homework", "p123, ex4"); err != nil {
-		panic(err)
-	}
+	// if err := sql.InsertRow(ctx, conn, "homework", "p123, ex4"); err != nil {
+	// 	panic(err)
+	// }
 
-	if err := sql.UpdateRow(ctx, conn, 2); err != nil {
-		panic(err)
-	}
-	if err := sql.DeleteRow(ctx, conn, 1); err != nil {
-		panic(err)
-	}
+	// if err := sql.UpdateRow(ctx, conn, 2); err != nil {
+	// 	panic(err)
+	// }
 
+	// if err := sql.DeleteRow(ctx, conn, 1); err != nil {
+	// 	panic(err)
+	// }
+
+	if err := sql.SelectRows(ctx, conn); err != nil {
+		panic(err)
+	}
 }
